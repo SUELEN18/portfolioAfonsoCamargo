@@ -1,0 +1,966 @@
+
+/* ================================================= */
+/* CONFIGURAÇÃO GERAL                                */
+/* ================================================= */
+
+
+/* Remove margens e espaços automáticos */
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ================================================= */
+/* CORES DO SITE                                     */
+/* ================================================= */
+
+
+/*
+As variáveis permitem trocar as cores
+do site com facilidade.
+*/
+
+:root {
+
+    --fundo: #f4f6f8;
+
+    --texto: #222222;
+
+    --card: #ffffff;
+
+    --principal: #087f5b;
+
+    --secundaria: #055c46;
+
+    --borda: #dddddd;
+
+}
+
+
+/* ================================================= */
+/* CORPO DO SITE                                     */
+/* ================================================= */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: var(--fundo);
+
+    color: var(--texto);
+
+    line-height: 1.6;
+
+    transition: 0.3s;
+
+}
+
+
+/* ================================================= */
+/* MODO ESCURO                                       */
+/* ================================================= */
+
+
+/*
+Quando o JavaScript adicionar a classe
+"escuro" ao body, essas cores serão utilizadas.
+*/
+
+body.escuro {
+
+    --fundo: #121212;
+
+    --texto: #f1f1f1;
+
+    --card: #1f1f1f;
+
+    --principal: #36c99a;
+
+    --secundaria: #249c77;
+
+    --borda: #444444;
+
+}
+
+
+/* ================================================= */
+/* CABEÇALHO                                         */
+/* ================================================= */
+
+header {
+
+    background-color: var(--principal);
+
+    color: white;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+}
+
+
+.topo h1 {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+.topo p {
+
+    font-size: 1.1rem;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ================================================= */
+/* BOTÃO DO TEMA                                    */
+/* ================================================= */
+
+#botaoTema {
+
+    padding: 12px 20px;
+
+    border: 2px solid white;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+}
+
+
+/* Efeito quando passa o mouse */
+#botaoTema:hover {
+
+    background-color: white;
+
+    color: var(--principal);
+
+}
+
+
+/* ================================================= */
+/* MENU                                              */
+/* ================================================= */
+
+nav {
+
+    background-color: var(--secundaria);
+
+    padding: 15px;
+
+    text-align: center;
+
+}
+
+
+/* Links */
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin: 0 15px;
+
+    font-weight: bold;
+
+}
+
+
+/* Efeito do mouse */
+nav a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ================================================= */
+/* CONTEÚDO                                          */
+/* ================================================= */
+
+main {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+/* ================================================= */
+/* SEÇÕES                                            */
+/* ================================================= */
+
+section {
+
+    margin: 40px 0;
+
+}
+
+
+/* Títulos */
+section h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+
+    color: var(--principal);
+
+}
+
+
+/* Texto de descrição */
+.descricao {
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ================================================= */
+/* APRESENTAÇÃO                                      */
+/* ================================================= */
+
+.apresentacao {
+
+    background-color: var(--card);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 15px;
+
+    padding: 35px;
+
+    margin-top: 40px;
+
+}
+
+
+/* ================================================= */
+/* PROJETOS                                          */
+/* ================================================= */
+
+.projeto {
+
+    display: flex;
+
+    gap: 25px;
+
+    background-color: var(--card);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Área da imagem */
+.imagem-projeto {
+
+    width: 35%;
+
+}
+
+
+/* Imagem */
+.imagem-projeto img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+}
+
+
+/* Texto do projeto */
+.conteudo-projeto {
+
+    width: 65%;
+
+}
+
+
+/* Categoria */
+.categoria {
+
+    display: inline-block;
+
+    background-color: var(--principal);
+
+    color: white;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* Título */
+.conteudo-projeto h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+/* ================================================= */
+/* VÍDEOS                                            */
+/* ================================================= */
+
+.galeria-videos {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* Card do vídeo */
+.video {
+
+    background-color: var(--card);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+}
+
+
+/* Vídeo */
+.video video {
+
+    width: 100%;
+
+    border-radius: 10px;
+
+    margin: 15px 0;
+
+}
+
+
+/* ================================================= */
+/* RODAPÉ                                            */
+/* ================================================= */
+
+footer {
+
+    background-color: var(--secundaria);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 50px;
+
+}
+
+
+/* ================================================= */
+/* ACESSIBILIDADE                                   */
+/* ================================================= */
+
+
+/*
+Quando o usuário seleciona o modo escuro,
+mantemos um bom contraste entre fundo e texto.
+*/
+
+
+/* ================================================= */
+/* CELULAR / TABLET                                  */
+/* ================================================= */
+
+
+/*
+Essas regras fazem o site se adaptar
+a telas menores.
+*/
+
+@media (max-width: 700px) {
+
+
+    /* Diminui o título */
+    .topo h1 {
+
+        font-size: 2rem;
+
+    }
+
+
+    /* Menu fica mais organizado */
+    nav a {
+
+        display: block;
+
+        margin: 10px;
+
+    }
+
+
+    /* Projeto passa a ficar vertical */
+    .projeto {
+
+        flex-direction: column;
+
+    }
+
+
+    /* Imagem ocupa toda a largura */
+    .imagem-projeto {
+
+        width: 100%;
+
+    }
+
+
+    /* Texto ocupa toda a largura */
+    .conteudo-projeto {
+
+        width: 100%;
+
+    }
+
+
+    /* Vídeos ficam um abaixo do outro */
+    .galeria-videos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+/* ================================================= */
+/* CARROSSEL DE FOTOS                                */
+/* ================================================= */
+
+
+/* Área geral do carrossel */
+.carrossel {
+
+    position: relative;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background-color: var(--card);
+
+    border: 1px solid var(--borda);
+
+}
+
+
+/* Cada slide */
+.slide {
+
+    display: none;
+
+    position: relative;
+
+}
+
+
+/*
+Somente o slide que possui a classe
+"ativo" será mostrado.
+*/
+.slide.ativo {
+
+    display: block;
+
+}
+
+
+/* Imagem */
+.slide img {
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* ================================================= */
+/* LEGENDA                                           */
+/* ================================================= */
+
+.legenda {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px;
+
+    /*
+    Fundo escuro transparente para facilitar
+    a leitura da legenda sobre a imagem.
+    */
+
+    background-color: rgba(0, 0, 0, 0.70);
+
+    color: white;
+
+}
+
+
+.legenda h3 {
+
+    margin-bottom: 5px;
+
+    font-size: 1.4rem;
+
+}
+
+
+.legenda p {
+
+    font-size: 1rem;
+
+}
+
+
+/* ================================================= */
+/* BOTÕES DO CARROSSEL                               */
+/* ================================================= */
+
+
+/* Botão anterior e próximo */
+.anterior,
+.proximo {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 50%;
+
+    width: 50px;
+
+    height: 50px;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+/* Botão esquerdo */
+.anterior {
+
+    left: 15px;
+
+}
+
+
+/* Botão direito */
+.proximo {
+
+    right: 15px;
+
+}
+
+
+/* Efeito quando passa o mouse */
+.anterior:hover,
+.proximo:hover {
+
+    background-color: var(--principal);
+
+}
+
+
+/* ================================================= */
+/* INDICADORES                                       */
+/* ================================================= */
+
+.indicadores {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+}
+
+
+/* Bolinhas */
+.indicadores button {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background-color: #999;
+
+    margin: 5px;
+
+    cursor: pointer;
+
+}
+
+
+/* Bolinha quando selecionada */
+.indicadores button:hover {
+
+    background-color: var(--principal);
+
+}
+
+
+/* ================================================= */
+/* CELULAR                                           */
+/* ================================================= */
+
+@media (max-width: 700px) {
+
+    /* Diminui a altura da imagem */
+
+    .slide img {
+
+        height: 350px;
+
+    }
+
+
+    /* Diminui o tamanho da legenda */
+
+    .legenda {
+
+        padding: 15px;
+
+    }
+
+
+    .legenda h3 {
+
+        font-size: 1.1rem;
+
+    }
+
+
+    .legenda p {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    /* Botões menores */
+
+    .anterior,
+    .proximo {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 20px;
+
+    }
+
+}
+
+
+/* ================================================= */
+/* DESAFIO DO TRIMESTRE                              */
+/* ================================================= */
+
+.texto-desafio {
+
+    background-color: var(--card);
+
+    border-left: 6px solid var(--principal);
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* Espaçamento entre os parágrafos */
+
+.texto-desafio p {
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ================================================= */
+/* OBJETIVOS                                          */
+/* ================================================= */
+
+.objetivos-desafio {
+
+    margin-top: 30px;
+
+}
+
+
+.objetivos-desafio h3 {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Organização dos cards */
+
+.cards-objetivos {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* Cada card */
+
+.card-objetivo {
+
+    background-color: var(--card);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    transition: transform 0.3s;
+
+}
+
+
+/* Efeito ao passar o mouse */
+
+.card-objetivo:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+/* Número do card */
+
+.card-objetivo span {
+
+    display: inline-block;
+
+    background-color: var(--principal);
+
+    color: white;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+
+}
+
+
+.card-objetivo h4 {
+
+    margin-bottom: 10px;
+
+}
+
+
+/* ================================================= */
+/* PERGUNTA CENTRAL                                   */
+/* ================================================= */
+
+.pergunta-desafio {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background-color: var(--principal);
+
+    color: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    margin: 35px 0;
+
+}
+
+
+.pergunta-desafio > span {
+
+    font-size: 3rem;
+
+}
+
+
+.pergunta-desafio h3 {
+
+    margin-bottom: 8px;
+
+}
+
+
+.pergunta-desafio p {
+
+    font-size: 1.1rem;
+
+}
+
+
+/* ================================================= */
+/* CONTRIBUIÇÃO                                       */
+/* ================================================= */
+
+.contribuicao {
+
+    background-color: var(--card);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+}
+
+
+.contribuicao h3 {
+
+    color: var(--principal);
+
+    margin-bottom: 15px;
+
+}
+
+
+.contribuicao p {
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE                                     */
+/* ================================================= */
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .cards-objetivos {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* Celular */
+
+@media (max-width: 600px) {
+
+    .cards-objetivos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pergunta-desafio {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}
+
+}
